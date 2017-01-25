@@ -3,8 +3,10 @@ public class ExtraIntListPractice {
       * each element incremented by x. L is not allowed
       * to change. */
     public static IntList incrList(IntList L, int x) {
-        /* Your code here. */
-        return L;        
+        if(L == Null)
+            return Null;
+        IntList inList = new IntList(L.first, incrList(L.rest, x));
+        return inList
     }
 
     /** Returns an IntList identical to L, but with
